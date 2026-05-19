@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Top tabs</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .tabs { display:flex; gap: 24px; padding: 16px 18px 0; background: #fff; border-radius: 14px; overflow: hidden; }
+  .ttab { position:relative; padding: 14px 0; font-size: 17px; font-weight: 700; color: var(--ds-ink-3); cursor: pointer; }
+  .ttab.on { color: var(--ds-blue); }
+  .ttab.on::after { content:""; position:absolute; left:0; right:0; bottom:0; height: 3px; border-radius: 2px; background: var(--ds-blue); }
+</style>
+</head><body class="card">
+<div class="tabs">
+  <div class="ttab">Overview</div>
+  <div class="ttab">Accounting</div>
+  <div class="ttab on">Invoicing</div>
+  <div class="ttab">Payroll</div>
+  <div class="ttab">Filings</div>
+</div>
+</body></html>

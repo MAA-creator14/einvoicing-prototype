@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Balance card</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .balance {
+    position: relative; overflow: hidden;
+    background: #00224F; border-radius: 20px;
+    padding: 22px 24px; color: #fff; min-height: 180px;
+  }
+  .balance svg.swell-bg {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .balance .row1 { position: relative; z-index:2; display:flex; align-items:center; gap:8px; margin-bottom: 14px; }
+  .balance .badge {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--ds-blue);
+    display:inline-flex; align-items:center; justify-content:center;
+    font-size:10px; font-weight:800; letter-spacing:-0.02em;
+  }
+  .balance .name { font-weight: 700; font-size: 16px; }
+  .balance .details { margin-left:auto; font-weight: 600; font-size: 15px; opacity: 0.9; }
+  .balance .amount { position: relative; z-index: 2; font-size: 44px; font-weight: 800; letter-spacing:-0.02em; line-height: 1.05; font-variant-numeric: tabular-nums; }
+</style>
+</head><body class="card">
+<div class="balance">
+  <!-- the Swell motif: three overlapping chevron strokes, slanted -->
+  <svg class="swell-bg" viewBox="0 0 600 200" preserveAspectRatio="xMaxYMid slice">
+    <defs>
+      <clipPath id="card-clip"><rect width="600" height="200" rx="20"/></clipPath>
+    </defs>
+    <g clip-path="url(#card-clip)">
+      <path d="M 600 -40 L 720 -40 L 480 240 L 360 240 Z" fill="#0B3A85" opacity="0.55"/>
+      <path d="M 600 -40 L 640 -40 L 400 240 L 360 240 Z" fill="#0A2E66" opacity="0.95"/>
+      <path d="M 600 60 L 660 60 L 460 340 L 400 340 Z" fill="#001A3D"/>
+      <path d="M 600 100 L 650 100 L 480 340 L 430 340 Z" fill="#0B3A85" opacity="0.5"/>
+    </g>
+  </svg>
+  <div class="row1">
+    <span class="badge">tide</span>
+    <span class="name">Tide Current Account</span>
+    <span class="details">Details ›</span>
+  </div>
+  <div class="amount">£2,954.01</div>
+</div>
+</body></html>

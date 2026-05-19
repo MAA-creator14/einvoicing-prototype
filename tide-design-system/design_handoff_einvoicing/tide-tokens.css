@@ -1,0 +1,218 @@
+/* ============================================================
+   Tide Design System — colors & type tokens
+   Thin visual layer modelled on the Tide UK app + tide.co
+   ============================================================ */
+
+/* Webfont: Tide uses GT Walsheim (commercial, not on Google Fonts).
+   We substitute Mulish — a friendly geometric sans on Google Fonts
+   with similar proportions, rounded terminals, and a humanist feel.
+   ASK: Have a GT Walsheim licence? Drop the .woff2 files into
+   fonts/ and swap the @font-face / --ds-font-sans below. */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  /* ---------- BRAND COLOR ---------- */
+  --ds-blue-deep:    #00224F;  /* Tide deep navy — primary account card bg */
+  --ds-blue-deep-2:  #001A3D;  /* darker step for the chevron/swell gradient */
+  --ds-blue:         #2B59FF;  /* Tide electric blue — primary action */
+  --ds-blue-logo:    #4050FB;  /* the slightly violet-blue used in the logo glyph */
+  --ds-blue-press:   #1C3FCC;  /* pressed/hover state */
+  --ds-blue-soft:    #D6E0FF;  /* tint for callout banners / info pills */
+  --ds-blue-softer:  #EDF1FF;  /* softest blue tint (selection bg) */
+
+  /* Light surface palette — exact lavender-grey from the app */
+  --ds-bg:           #F0F2F8;  /* canvas behind cards */
+  --ds-bg-tint:      #E6E9F4;
+  --ds-surface:      #FFFFFF;  /* card surface */
+  --ds-surface-2:    #F7F8FC;  /* nested card on white */
+
+  /* Ink & neutral text */
+  --ds-ink:          #0B1B3B;  /* near-black with a hint of navy */
+  --ds-ink-2:        #283656;  /* secondary text */
+  --ds-ink-3:        #5F6B85;  /* tertiary / labels */
+  --ds-ink-4:        #8A95AE;  /* placeholder, disabled-ish */
+  --ds-divider:      #E2E6F0;  /* hairline + dashed dividers */
+
+  /* Accent — used sparingly in illustrations / charts */
+  --ds-mint:         #5BC8B0;  /* aqua/teal disc in invoice illustration */
+  --ds-mint-soft:    #D8F0E9;
+  --ds-amber:        #FFB547;
+  --ds-rose:         #FF6B7A;
+
+  /* Semantic */
+  --ds-success:      #1E8A5C;
+  --ds-success-bg:   #E2F3EA;
+  --ds-warning:      #B36900;
+  --ds-warning-bg:   #FFF1D9;
+  --ds-danger:       #D32A3C;
+  --ds-danger-bg:    #FCE5E8;
+
+  /* Notification dot (transactions counter, etc) */
+  --ds-notify:       #E2273A;
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --ds-font-sans: "Mulish", "GT Walsheim", "GT Walsheim Pro", -apple-system,
+                  BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+                  sans-serif;
+  --ds-font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas,
+                  monospace;
+  --ds-font-num:  var(--ds-font-sans); /* numerals use the same family,
+                                          but lean on weight 700–800 for hero
+                                          balance figures */
+
+  /* ---------- TYPE SCALE ---------- */
+  /* Mobile-first; same scale works for web (tide.co uses slightly larger). */
+  --ds-fs-display:    44px;   /* hero balance / page hero numerals */
+  --ds-fs-h1:         32px;
+  --ds-fs-h2:         24px;
+  --ds-fs-h3:         20px;
+  --ds-fs-title:      18px;   /* card title, screen title */
+  --ds-fs-body:       16px;
+  --ds-fs-body-sm:    15px;
+  --ds-fs-meta:       14px;
+  --ds-fs-caption:    12px;
+  --ds-fs-overline:   11px;
+
+  /* line-heights */
+  --ds-lh-tight:  1.1;   /* display numerals */
+  --ds-lh-snug:   1.25;  /* headings */
+  --ds-lh-base:   1.45;  /* body */
+  --ds-lh-loose:  1.6;   /* longform / body sm */
+
+  /* weights — Tide leans heavy on 700/800 for headlines + numerals */
+  --ds-fw-regular: 400;
+  --ds-fw-medium:  600;
+  --ds-fw-semibold: 700;
+  --ds-fw-bold:    800;
+  --ds-fw-black:   900;
+
+  /* ---------- SHAPE & ELEVATION ---------- */
+  --ds-radius-xs:   6px;
+  --ds-radius-sm:   10px;
+  --ds-radius-md:   14px;   /* form fields, small cards */
+  --ds-radius-lg:   20px;   /* hero balance card, large cards */
+  --ds-radius-xl:   28px;   /* segmented illustrations container */
+  --ds-radius-pill: 999px;
+
+  --ds-shadow-1: 0 1px 2px rgba(11, 27, 59, 0.06);
+  --ds-shadow-2: 0 4px 12px rgba(11, 27, 59, 0.06),
+                 0 1px 2px rgba(11, 27, 59, 0.04);
+  --ds-shadow-3: 0 12px 32px rgba(11, 27, 59, 0.10);
+  --ds-shadow-card: 0 2px 0 rgba(11, 27, 59, 0.02); /* nearly flat — Tide
+                                                       uses crisp edges */
+
+  /* ---------- SPACING ---------- */
+  --ds-space-1:  4px;
+  --ds-space-2:  8px;
+  --ds-space-3:  12px;
+  --ds-space-4:  16px;
+  --ds-space-5:  20px;
+  --ds-space-6:  24px;
+  --ds-space-8:  32px;
+  --ds-space-10: 40px;
+  --ds-space-12: 48px;
+  --ds-space-16: 64px;
+
+  /* ---------- MOTION ---------- */
+  --ds-ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ds-ease-in:  cubic-bezier(0.42, 0, 1, 1);
+  --ds-dur-fast: 120ms;
+  --ds-dur-med:  220ms;
+  --ds-dur-slow: 320ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   Use these in mock-ups rather than re-declaring sizes.
+   ============================================================ */
+
+.ds-display {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-bold);
+  font-size: var(--ds-fs-display);
+  line-height: var(--ds-lh-tight);
+  letter-spacing: -0.02em;
+  color: var(--ds-ink);
+}
+.ds-h1 {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-bold);
+  font-size: var(--ds-fs-h1);
+  line-height: var(--ds-lh-snug);
+  letter-spacing: -0.015em;
+  color: var(--ds-ink);
+}
+.ds-h2 {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-bold);
+  font-size: var(--ds-fs-h2);
+  line-height: var(--ds-lh-snug);
+  letter-spacing: -0.01em;
+  color: var(--ds-ink);
+}
+.ds-h3 {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-semibold);
+  font-size: var(--ds-fs-h3);
+  line-height: var(--ds-lh-snug);
+  color: var(--ds-ink);
+}
+.ds-title {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-semibold);
+  font-size: var(--ds-fs-title);
+  line-height: var(--ds-lh-snug);
+  color: var(--ds-ink);
+}
+.ds-body {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-regular);
+  font-size: var(--ds-fs-body);
+  line-height: var(--ds-lh-base);
+  color: var(--ds-ink);
+}
+.ds-body-sm {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-regular);
+  font-size: var(--ds-fs-body-sm);
+  line-height: var(--ds-lh-loose);
+  color: var(--ds-ink-2);
+}
+.ds-meta {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-regular);
+  font-size: var(--ds-fs-meta);
+  line-height: var(--ds-lh-base);
+  color: var(--ds-ink-3);
+}
+.ds-caption {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-medium);
+  font-size: var(--ds-fs-caption);
+  line-height: var(--ds-lh-base);
+  color: var(--ds-ink-3);
+}
+.ds-overline {
+  font-family: var(--ds-font-sans);
+  font-weight: var(--ds-fw-bold);
+  font-size: var(--ds-fs-overline);
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ds-ink-3);
+}
+.ds-num {
+  /* hero numerals — used for balances, totals, large stats */
+  font-family: var(--ds-font-num);
+  font-weight: var(--ds-fw-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* link / inline */
+.ds-link {
+  color: var(--ds-blue);
+  font-weight: var(--ds-fw-semibold);
+  text-decoration: none;
+}
+.ds-link:hover { text-decoration: underline; }

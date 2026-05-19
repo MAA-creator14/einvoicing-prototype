@@ -1,0 +1,90 @@
+/* shared card chrome for preview/ */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ds-bg);
+  font-family: var(--ds-font-sans);
+  color: var(--ds-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.card {
+  /* every preview card has the lavender canvas + an inner wrapper */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.card-frame {
+  background: var(--ds-bg);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+.muted { color: var(--ds-ink-3); font-size: 13px; }
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ds-ink-3);
+  font-weight: 700;
+}
+
+/* swatch with bottom-aligned label */
+.swatch {
+  border-radius: 14px;
+  padding: 14px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: 600;
+}
+.swatch .hex { font-family: var(--ds-font-mono); font-size: 11px; opacity: 0.85; font-weight: 500; }
+
+/* card surface ON the lavender, used to demo white cards */
+.surface {
+  background: var(--ds-surface);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+/* "swell" deep navy with overlapping chevrons */
+.swell {
+  position: relative;
+  overflow: hidden;
+  background: var(--ds-blue-deep);
+  border-radius: 20px;
+  color: #fff;
+}
+.swell::before, .swell::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  right: -10%;
+  width: 70%;
+  background: var(--ds-blue-deep-2);
+  transform: skewX(-22deg);
+  transform-origin: top right;
+  opacity: 0.7;
+  border-top-left-radius: 40% 100%;
+}
+.swell::after {
+  right: -28%;
+  background: #0A2E66;
+  opacity: 0.55;
+}

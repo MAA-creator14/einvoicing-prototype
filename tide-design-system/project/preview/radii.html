@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Radii</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .r-tile { background:var(--ds-surface); height:88px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:8px;}
+  .r-tile .name { font-weight:700; font-size:13px; }
+  .r-tile .val { font-family:var(--ds-font-mono); font-size:11px; color:var(--ds-ink-3); }
+</style>
+</head><body class="card">
+<div class="grid-4">
+  <div class="r-tile" style="border-radius:6px;"><div class="name">xs</div><div class="val">6px</div></div>
+  <div class="r-tile" style="border-radius:10px;"><div class="name">sm</div><div class="val">10px</div></div>
+  <div class="r-tile" style="border-radius:14px;"><div class="name">md</div><div class="val">14px · fields</div></div>
+  <div class="r-tile" style="border-radius:20px;"><div class="name">lg</div><div class="val">20px · cards</div></div>
+  <div class="r-tile" style="border-radius:28px;"><div class="name">xl</div><div class="val">28px</div></div>
+  <div class="r-tile" style="border-radius:999px;"><div class="name">pill</div><div class="val">999px · buttons</div></div>
+  <div class="r-tile" style="border-radius:50%; aspect-ratio:1; height:auto;"><div class="name">circle</div><div class="val">50% · quick</div></div>
+  <div class="r-tile" style="border-radius:0;"><div class="name">none</div><div class="val">0px</div></div>
+</div>
+</body></html>

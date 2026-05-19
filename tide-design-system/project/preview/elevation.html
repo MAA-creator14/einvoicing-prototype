@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Elevation</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .e-tile { background:var(--ds-surface); border-radius:14px; height:90px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:8px; }
+  .e-tile .name { font-weight:700; font-size:13px; }
+  .e-tile .val { font-family:var(--ds-font-mono); font-size:10px; color:var(--ds-ink-3); }
+</style>
+</head><body class="card">
+<div class="ds-overline" style="margin-bottom:4px">Elevation is light, not lifted</div>
+<div class="grid-4">
+  <div class="e-tile"><div class="name">flat</div><div class="val">no shadow</div></div>
+  <div class="e-tile" style="box-shadow:var(--ds-shadow-1);"><div class="name">1</div><div class="val">hairline</div></div>
+  <div class="e-tile" style="box-shadow:var(--ds-shadow-2);"><div class="name">2</div><div class="val">card hover</div></div>
+  <div class="e-tile" style="box-shadow:var(--ds-shadow-3);"><div class="name">3</div><div class="val">modal · rare</div></div>
+</div>
+<div class="muted" style="margin-top:4px">Tide rarely lifts cards. Elevation is signalled by colour contrast against the lavender canvas, not drop shadow.</div>
+</body></html>

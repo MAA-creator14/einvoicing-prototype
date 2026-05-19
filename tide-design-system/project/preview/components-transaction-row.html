@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Transaction row</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .tx { background:#fff; padding: 14px 16px; display:flex; align-items:center; gap: 12px; border-bottom: 1px solid var(--ds-divider); }
+  .tx:last-child { border-bottom: 0; }
+  .tx-list { background:#fff; border-radius:20px; overflow:hidden; }
+  .logo { width: 40px; height: 40px; border-radius: 8px; display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff; font-size: 14px; flex-shrink: 0; }
+  .meta { flex: 1; min-width: 0; }
+  .meta .name { font-size: 16px; font-weight: 700; color: var(--ds-ink); }
+  .meta .cat { font-size: 14px; color: var(--ds-ink-3); }
+  .amt { text-align: right; }
+  .amt .g { font-size: 16px; font-weight: 700; color: var(--ds-ink); }
+  .amt .o { font-size: 14px; color: var(--ds-ink-3); }
+  .fx { background: var(--ds-blue-soft); color: var(--ds-blue-deep); padding: 10px 14px; font-size: 13px; font-weight: 600; }
+  .fx a { color: var(--ds-blue); text-decoration: underline; }
+</style>
+</head><body class="card">
+<div class="tx-list">
+  <div class="tx">
+    <div class="logo" style="background:#1B1B1B; border-radius: 6px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2 L22 8 L22 16 L12 22 L2 16 L2 8 Z" opacity="0.85"/></svg>
+    </div>
+    <div class="meta"><div class="name">Cursor, Ai Powered Ide</div><div class="cat">Software and IT costs</div></div>
+    <div class="amt"><div class="g">£18.03</div><div class="o">$24.00</div></div>
+  </div>
+  <div class="fx">You paid £0.50 in FX fees. <a>Upgrade for 0% FX fees</a></div>
+  <div class="tx">
+    <div class="logo" style="background:#0E0E0E;">L</div>
+    <div class="meta"><div class="name">Lovable</div><div class="cat">Software and IT costs</div></div>
+    <div class="amt"><div class="g">£18.44</div><div class="o">$25.00</div></div>
+  </div>
+  <div class="tx">
+    <div class="logo" style="background:linear-gradient(135deg,#F24E1E,#A259FF);">F</div>
+    <div class="meta"><div class="name">Figma</div><div class="cat">Software and IT costs</div></div>
+    <div class="amt"><div class="g">£21.60</div></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Illustration style</title>
+<link rel="stylesheet" href="_card.css">
+</head><body class="card">
+<div style="background:#fff; padding:20px; border-radius:20px;">
+  <div class="ds-overline" style="margin-bottom:8px">Flat geometric illustration · 4‑colour</div>
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-items:center;">
+
+    <!-- invoice illustration (rect + disc) -->
+    <svg viewBox="0 0 120 100" style="width:100%;">
+      <rect x="30" y="14" width="60" height="80" fill="#4050FB"/>
+      <circle cx="80" cy="58" r="18" fill="#5BC8B0"/>
+      <rect x="72" y="80" width="22" height="10" fill="#00224F"/>
+    </svg>
+
+    <!-- cursor on document -->
+    <svg viewBox="0 0 140 100" style="width:100%;">
+      <rect x="36" y="12" width="56" height="68" fill="#D5D9E3"/>
+      <rect x="18" y="40" width="32" height="40" fill="#9EA6BB"/>
+      <rect x="12" y="76" width="20" height="6" fill="#0B1B3B"/>
+      <rect x="48" y="32" width="32" height="4" fill="#9EA6BB"/>
+      <rect x="48" y="42" width="28" height="4" fill="#9EA6BB"/>
+      <path d="M 84 30 L 84 64 L 93 56 L 99 70 L 105 67 L 99 54 L 109 54 Z" fill="#B6CCFF"/>
+      <rect x="94" y="54" width="14" height="20" fill="#2B59FF" transform="rotate(20 101 64)"/>
+    </svg>
+
+    <!-- card stack -->
+    <svg viewBox="0 0 140 100" style="width:100%;">
+      <rect x="18" y="30" width="80" height="50" rx="8" fill="#4050FB"/>
+      <rect x="40" y="14" width="80" height="50" rx="8" fill="#00224F"/>
+      <rect x="48" y="28" width="22" height="8" fill="#5BC8B0"/>
+    </svg>
+
+  </div>
+  <div class="ds-body-sm" style="margin-top:10px;">Axis‑aligned rectangles + one circle + one cursor/arrow. No strokes, no gradients, no shadows. Palette: <code style="font-family:var(--ds-font-mono);font-size:11px">#4050FB · #00224F · #5BC8B0 · #B8BFD1</code>.</div>
+</div>
+</body></html>

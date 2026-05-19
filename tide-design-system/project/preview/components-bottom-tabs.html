@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Bottom tab bar</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .tabbar { background:#fff; padding: 14px 8px 16px; border-radius: 14px; display:flex; }
+  .tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
+  .tab .lbl { font-size: 11px; font-weight: 700; color: var(--ds-ink-3); }
+  .tab.on .lbl { color: var(--ds-blue); }
+  .tab.on .ic { color: var(--ds-blue); }
+  .tab .ic { color: var(--ds-ink-3); }
+</style>
+</head><body class="card">
+<div class="tabbar">
+  <div class="tab">
+    <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+    <div class="lbl">Home</div>
+  </div>
+  <div class="tab on">
+    <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="7" width="14" height="11" rx="2" fill="#fff" stroke="currentColor"/><rect x="7" y="4" width="14" height="11" rx="2"/></svg>
+    <div class="lbl">Payments</div>
+  </div>
+  <div class="tab">
+    <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 016 0"/></svg>
+    <div class="lbl">Sales</div>
+  </div>
+  <div class="tab">
+    <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+    <div class="lbl">Admin</div>
+  </div>
+  <div class="tab">
+    <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4-7-10a5 5 0 017-4.58A5 5 0 0119 10c0 6-7 10-7 10z"/><path d="M12 11v9"/></svg>
+    <div class="lbl">Finance</div>
+  </div>
+</div>
+</body></html>
