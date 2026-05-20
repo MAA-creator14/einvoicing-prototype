@@ -1,0 +1,10 @@
+{
+  "name": "einvoicing-prototype-workspace",
+  "private": true,
+  "description": "Workspace wrapper so npm scripts run from the project root.",
+  "scripts": {
+    "dev": "npm --prefix einvoicing-app run dev",
+    "build": "npm --prefix einvoicing-app run build",
+    "start": "npm --prefix einvoicing-app run start"
+  }
+}

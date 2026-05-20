@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { mockInvoices } from '@/data/mockData';
 import StatusBadge from '@/components/StatusBadge';
 import BottomNav from '@/components/BottomNav';
+import { useInvoiceState } from '@/hooks/useInvoiceState';
 
 function formatAmount(n) {
   return `£${n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
@@ -100,7 +100,7 @@ function EmptyState() {
 }
 
 export default function InvoiceListPage() {
-  const invoices = mockInvoices;
+  const { invoices } = useInvoiceState();
 
   return (
     <>

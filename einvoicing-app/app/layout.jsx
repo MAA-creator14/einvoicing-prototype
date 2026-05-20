@@ -1,12 +1,12 @@
 import './globals.css';
-import { Mulish } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import { AppProvider } from '@/lib/AppContext';
 import Toast from '@/components/Toast';
 import DevPanel from '@/components/DevPanel';
 
-const mulish = Mulish({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-mulish',
   display: 'swap',
 });
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           __html: `if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js');`,
         }} />
       </head>
-      <body className={mulish.variable}>
+      <body className={plusJakartaSans.variable}>
         <AppProvider>
           <div className="app-shell">
             {children}

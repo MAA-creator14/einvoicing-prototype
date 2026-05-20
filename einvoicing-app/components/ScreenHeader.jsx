@@ -10,10 +10,10 @@ export default function ScreenHeader({ title, leading = 'back', trailing, onBack
   return (
     <div style={{
       background: 'var(--ds-surface)',
-      padding: '6px 16px 12px',
+      padding: '12px 18px 14px',
       display: 'flex',
       alignItems: 'center',
-      gap: 12,
+      gap: 16,
       borderBottom: '1px solid var(--ds-divider)',
     }}>
       <button
@@ -40,11 +40,11 @@ export default function ScreenHeader({ title, leading = 'back', trailing, onBack
         )}
       </button>
       <div style={{
-        fontWeight: 800,
-        fontSize: 'var(--ds-fs-title)',
+        fontWeight: 700,
+        fontSize: 20,
         color: 'var(--ds-ink)',
         flex: 1,
-        letterSpacing: '-0.01em',
+        letterSpacing: '-0.02em',
       }}>
         {title}
       </div>

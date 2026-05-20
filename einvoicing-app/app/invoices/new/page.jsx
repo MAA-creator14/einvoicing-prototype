@@ -6,7 +6,8 @@ import ScreenHeader from '@/components/ScreenHeader';
 import Toggle from '@/components/Toggle';
 import { Card, CardRow } from '@/components/Card';
 import { useAppState } from '@/lib/AppContext';
-import { customers, defaultLineItems, countryNetworkMap } from '@/data/mockData';
+import { customers, defaultLineItems } from '@/data/mockData';
+import { countryNetworkMap } from '@/data/networkConfig';
 
 const VAT_RATE = 0.2;
 
@@ -20,7 +21,7 @@ function CustomerAvatar({ initials }) {
       width: 36,
       height: 36,
       borderRadius: 10,
-      background: 'var(--ds-blue-softer)',
+      background: 'var(--ds-blue-soft)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -50,7 +51,7 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
       <div style={{ padding: '16px 18px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <div style={{ flex: 1 }}>
-            <div style={{ fontWeight: 700, fontSize: 'var(--ds-fs-body)', color: 'var(--ds-ink)' }}>
+            <div style={{ fontWeight: 700, fontSize: 'var(--ds-fs-body)', color: 'var(--ds-ink)', letterSpacing: '-0.02em' }}>
               Send as e-invoice
             </div>
             <div style={{ fontSize: 'var(--ds-fs-caption)', color: 'var(--ds-ink-3)', marginTop: 2, lineHeight: 1.4 }}>
@@ -74,8 +75,8 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
             padding: '10px 12px',
             background: 'var(--ds-bg)',
             color: 'var(--ds-ink-3)',
-            borderRadius: 'var(--ds-radius-sm)',
-            fontSize: 'var(--ds-fs-caption)',
+            borderRadius: 'var(--ds-radius-md)',
+            fontSize: 'var(--ds-fs-meta)',
             fontWeight: 600,
             lineHeight: 1.4,
             display: 'flex',
@@ -96,11 +97,11 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
             padding: '10px 12px',
             background: 'var(--ds-success-bg)',
             color: 'var(--ds-success)',
-            borderRadius: 'var(--ds-radius-sm)',
+            borderRadius: 'var(--ds-radius-md)',
             display: 'flex',
             alignItems: 'flex-start',
             gap: 10,
-            fontSize: 'var(--ds-fs-caption)',
+            fontSize: 'var(--ds-fs-meta)',
             fontWeight: 600,
             lineHeight: 1.4,
             animation: 'tideFadeIn 200ms var(--ds-ease-out)',
@@ -119,8 +120,8 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
             padding: '12px 14px',
             background: 'var(--ds-blue-soft)',
             color: 'var(--ds-blue-deep)',
-            borderRadius: 'var(--ds-radius-sm)',
-            fontSize: 'var(--ds-fs-caption)',
+            borderRadius: 'var(--ds-radius-md)',
+            fontSize: 'var(--ds-fs-meta)',
             fontWeight: 600,
             lineHeight: 1.45,
             display: 'flex',
@@ -128,9 +129,9 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
             gap: 10,
             animation: 'tideFadeIn 200ms var(--ds-ease-out)',
           }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--ds-blue)" style={{ flexShrink: 0, marginTop: 2 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" style={{ flexShrink: 0, marginTop: 2 }}>
               <circle cx="12" cy="12" r="10" fill="var(--ds-blue)"/>
-              <text x="12" y="16.5" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="800">i</text>
+              <path d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2z" fill="#fff"/>
             </svg>
             <div>
               <div>Set up e-invoicing first — takes 30 seconds.</div>
@@ -153,8 +154,8 @@ function EinvoiceToggleSection({ registrationState, einvoice, setEinvoice, custo
             padding: '12px 14px',
             background: 'var(--ds-warning-bg)',
             color: 'var(--ds-warning)',
-            borderRadius: 'var(--ds-radius-sm)',
-            fontSize: 'var(--ds-fs-caption)',
+            borderRadius: 'var(--ds-radius-md)',
+            fontSize: 'var(--ds-fs-meta)',
             fontWeight: 600,
             lineHeight: 1.45,
             display: 'flex',
@@ -401,26 +402,16 @@ export default function InvoiceCreatePage() {
           <div style={{
             background: registrationState === 'NOT_REGISTERED' ? 'var(--ds-blue-softer)' : 'var(--ds-warning-bg)',
             color: registrationState === 'NOT_REGISTERED' ? 'var(--ds-blue-deep)' : 'var(--ds-warning)',
-            borderRadius: 12,
-            padding: '10px 12px',
+            borderRadius: 'var(--ds-radius-md)',
+            padding: '10px 14px',
             marginBottom: 12,
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: 10,
-            fontSize: 'var(--ds-fs-caption)',
+            fontSize: 'var(--ds-fs-meta)',
             fontWeight: 600,
             lineHeight: 1.4,
           }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
-              {registrationState === 'NOT_REGISTERED'
-                ? <><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></>
-                : <><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></>}
-            </svg>
-            <span>
-              {registrationState === 'NOT_REGISTERED'
-                ? "To send as an e-invoice you'll need to set up e-invoicing first. Or send this one the usual way and set up later."
-                : "Your e-invoicing isn't quite ready yet. Send this one the usual way for now — we'll let you know when it's ready."}
-            </span>
+            {registrationState === 'NOT_REGISTERED'
+              ? "To send as an e-invoice you'll need to set up e-invoicing first. Or send this one the usual way and set up later."
+              : "Your e-invoicing isn't quite ready yet. Send this one the usual way for now — we'll let you know when it's ready."}
           </div>
         )}
 
