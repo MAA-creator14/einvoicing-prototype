@@ -1,10 +1,22 @@
 {
-  "name": "einvoicing-prototype-workspace",
+  "name": "einvoicing-prototype",
+  "version": "0.1.0",
   "private": true,
-  "description": "Workspace wrapper so npm scripts run from the project root.",
+  "type": "module",
   "scripts": {
-    "dev": "npm --prefix einvoicing-app run dev",
-    "build": "npm --prefix einvoicing-app run build",
-    "start": "npm --prefix einvoicing-app run start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20"
   }
 }

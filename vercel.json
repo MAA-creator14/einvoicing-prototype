@@ -1,6 +1,3 @@
 {
-  "installCommand": "npm --prefix einvoicing-app install",
-  "buildCommand": "npm --prefix einvoicing-app run build",
-  "outputDirectory": "einvoicing-app/.next",
   "framework": "nextjs"
 }
